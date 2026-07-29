@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore an Asteroid | Asteroids &amp; Comets</title>
+<meta name="description" content="Step onto the fictional asteroid Kepler-7X and explore its size, gravity, temperature, distance from Earth, and surface conditions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+<div class="nebula-glow"></div>
+
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><span class="dot"></span> ASTEROIDS &amp; COMETS</a>
+  <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="asteroids.html">Asteroids</a></li>
+    <li><a href="comets.html">Comets</a></li>
+    <li><a href="near-earth.html">Near-Earth</a></li>
+    <li><a href="explore.html">Explore</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero container">
+  <span class="eyebrow">Module 04 · Fictional Asteroid</span>
+  <h1>Touch Down on <span class="glow-text">Kepler-7X</span></h1>
+  <p class="lead" style="max-width:700px;margin:0 auto;">A rubble-pile near-Earth asteroid, invented for this experience. Click each marker on its surface to learn what it would actually be like to stand there.</p>
+</header>
+
+<section class="section container">
+  <div class="text-center fade-up">
+    <div class="daynight-toggle" role="group" aria-label="Toggle day or night side">
+      <button type="button" id="dayBtn" class="active"><span data-icon="sun"></span> Day Side</button>
+      <button type="button" id="nightBtn"><span data-icon="moon"></span> Night Side</button>
+    </div>
+  </div>
+
+  <div class="explore-layout fade-up">
+    <div class="explore-stage day" id="exploreStage">
+      <div class="asteroid-3d">
+        <div class="rock" style="width:100%;height:100%;"></div>
+      </div>
+
+      <button class="hotspot active" style="top:28%; left:38%;" data-topic="size" data-icon="ruler" aria-label="Size"></button>
+      <button class="hotspot" style="top:62%; left:22%;" data-topic="gravity" data-icon="feather" aria-label="Gravity"></button>
+      <button class="hotspot" style="top:20%; left:68%;" data-topic="temperature" data-icon="thermometer" aria-label="Temperature"></button>
+      <button class="hotspot" style="top:78%; left:58%;" data-topic="distance" data-icon="globe" aria-label="Distance from Earth"></button>
+      <button class="hotspot" style="top:50%; left:80%;" data-topic="surface" data-icon="surface" aria-label="Surface conditions"></button>
+      <button class="hotspot" style="top:55%; left:50%;" data-topic="standing" data-icon="astronaut" aria-label="What it's like to stand there"></button>
+    </div>
+
+    <div class="tool-panel" style="padding:32px;">
+      <div class="info-card-title">
+        <div class="icon-badge" id="exploreIcon" data-icon="ruler"></div>
+        <h3 id="exploreTitle">Size</h3>
+      </div>
+      <p id="exploreBody">Loading…</p>
+      <div class="stat-row" style="margin-top:24px;margin-bottom:0;">
+        <div class="stat"><span class="num" id="exploreStatNum">—</span><span class="label" id="exploreStatLabel">—</span></div>
+      </div>
+    </div>
+  </div>
+  <p class="text-center" style="margin-top:20px;color:var(--text-dim);font-size:0.9rem;">Kepler-7X is a fictional composite, built from real characteristics of rubble-pile near-Earth asteroids like Bennu and Itokawa.</p>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    Built for education &amp; exploration · Data inspired by NASA / JPL public science · Not an official NASA product
+  </div>
+</footer>
+
+<script src="js/icons.js"></script>
+<script src="js/stars.js"></script>
+<script src="js/main.js"></script>
+<script src="js/explore.js"></script>
+</body>
+</html>

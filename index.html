@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asteroids &amp; Comets | A Space Exploration Journey</title>
+<meta name="description" content="An immersive, interactive journey through asteroids, comets, near-Earth objects, and planetary defense.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+<div class="nebula-glow"></div>
+
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><span class="dot"></span> ASTEROIDS &amp; COMETS</a>
+  <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="asteroids.html">Asteroids</a></li>
+    <li><a href="comets.html">Comets</a></li>
+    <li><a href="near-earth.html">Near-Earth</a></li>
+    <li><a href="explore.html">Explore</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="hero-planet" aria-hidden="true"></div>
+  <span class="eyebrow">Mission: Deep Space Curriculum</span>
+  <h1>Explore the <span class="glow-text">Rocks &amp; Ice</span><br>of Our Solar System</h1>
+  <p class="lead">Journey through the asteroid belt, chase the tails of comets, track the objects that cross Earth's path, and step onto the surface of a fictional asteroid — all in one interactive experience.</p>
+  <div class="hero-actions">
+    <a href="asteroids.html" class="btn btn-primary">Start Exploring →</a>
+    <a href="explore.html" class="btn btn-outline">Land on an Asteroid</a>
+  </div>
+</header>
+
+<section class="container explore-cards">
+  <div class="grid-2" style="margin-bottom: 40px; grid-template-columns: 1fr;">
+    <div class="text-center fade-up">
+      <span class="eyebrow">Choose Your Mission</span>
+      <h2>Four Ways to Explore</h2>
+      <p style="max-width:600px;margin:0 auto;">Each module blends real NASA and JPL science with hands-on simulations you control.</p>
+    </div>
+  </div>
+
+  <div class="grid-4">
+    <a href="asteroids.html" class="explore-card fade-up">
+      <div class="card-icon" data-icon="asteroidBelt"></div>
+      <span class="tag">Module 01</span>
+      <h3>Asteroids</h3>
+      <p>What they're made of, where they come from, and how big Bennu and Vesta really are — with a size comparison tool.</p>
+      <span class="btn btn-outline" style="align-self:flex-start;">Enter →</span>
+    </a>
+
+    <a href="comets.html" class="explore-card fade-up">
+      <div class="card-icon" data-icon="comet"></div>
+      <span class="tag">Module 02</span>
+      <h3>Comets</h3>
+      <p>Dirty snowballs with glowing tails. Simulate a comet's journey around the Sun and watch its tail grow.</p>
+      <span class="btn btn-outline" style="align-self:flex-start;">Enter →</span>
+    </a>
+
+    <a href="near-earth.html" class="explore-card fade-up">
+      <div class="card-icon" data-icon="shield"></div>
+      <span class="tag">Module 03</span>
+      <h3>Near-Earth Asteroids</h3>
+      <p>How we track dangerous space rocks — and how NASA's DART mission proved we can knock one off course.</p>
+      <span class="btn btn-outline" style="align-self:flex-start;">Enter →</span>
+    </a>
+
+    <a href="explore.html" class="explore-card fade-up">
+      <div class="card-icon" data-icon="flag"></div>
+      <span class="tag">Module 04</span>
+      <h3>Explore an Asteroid</h3>
+      <p>Touch down on the fictional asteroid Kepler-7X. Feel the gravity, brave the temperature swings, and look around.</p>
+      <span class="btn btn-outline" style="align-self:flex-start;">Enter →</span>
+    </a>
+  </div>
+</section>
+
+<div class="container">
+  <div class="divider"></div>
+  <div class="grid-3 text-center" style="margin-bottom:60px;">
+    <div class="fade-up">
+      <div class="stat"><span class="num">1.3M+</span><span class="label">Known Asteroids</span></div>
+    </div>
+    <div class="fade-up">
+      <div class="stat"><span class="num">76 yrs</span><span class="label">Halley's Comet Orbit</span></div>
+    </div>
+    <div class="fade-up">
+      <div class="stat"><span class="num">33 min</span><span class="label">DART Orbit Shift</span></div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    Built for education &amp; exploration · Data inspired by NASA / JPL public science · Not an official NASA product
+  </div>
+</footer>
+
+<script src="js/icons.js"></script>
+<script src="js/stars.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asteroids | Asteroids &amp; Comets</title>
+<meta name="description" content="What asteroids are, where they come from, the asteroid belt, their composition, and famous asteroids like Bennu and Vesta — with an interactive size comparison tool.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+<div class="nebula-glow"></div>
+
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><span class="dot"></span> ASTEROIDS &amp; COMETS</a>
+  <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="asteroids.html">Asteroids</a></li>
+    <li><a href="comets.html">Comets</a></li>
+    <li><a href="near-earth.html">Near-Earth</a></li>
+    <li><a href="explore.html">Explore</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero container">
+  <span class="eyebrow">Module 01</span>
+  <h1>Asteroids: <span class="glow-text">Leftovers of Creation</span></h1>
+  <p class="lead" style="max-width:700px;margin:0 auto;">Rocky and metallic worlds too small to become planets, drifting through the solar system since its very beginning.</p>
+</header>
+
+<section class="section container">
+  <div class="grid-2 fade-up">
+    <div>
+      <span class="eyebrow">What They Are</span>
+      <h2>Rubble From an Unfinished Planet</h2>
+      <p>Asteroids are rocky, metallic bodies left over from the formation of the solar system roughly <strong>4.6 billion years ago</strong>. They're too small and too irregular to be considered planets — most are just a few meters to a few hundred kilometers across.</p>
+      <p>Unlike comets, asteroids formed closer to the Sun, in a region too warm for ice to survive, so they're made mostly of <strong>rock and metal</strong> rather than ice.</p>
+      <div class="stat-row">
+        <div class="stat"><span class="num">1.3M+</span><span class="label">Known Asteroids</span></div>
+        <div class="stat"><span class="num">~1000 km</span><span class="label">Largest (Ceres)</span></div>
+      </div>
+    </div>
+    <div class="panel fade-up">
+      <div class="rock" style="width:220px;height:180px;margin:0 auto;"></div>
+      <p class="text-center" style="margin-top:18px;color:var(--text-dim);font-size:0.85rem;">Illustrative asteroid shape — irregular, cratered, and un-rounded by gravity.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="grid-2 fade-up">
+      <div class="panel">
+        <h3>The Solar Nebula</h3>
+        <p>About 4.6 billion years ago, a giant cloud of gas and dust — the <strong>solar nebula</strong> — collapsed under its own gravity. Most of the material fell into the center to form the Sun, while the rest flattened into a spinning disk.</p>
+        <p>Within that disk, dust grains stuck together, forming pebbles, then boulders, then <strong>planetesimals</strong> — the building blocks of planets.</p>
+      </div>
+      <div>
+        <span class="eyebrow">Where They Come From</span>
+        <h2>Planet-Building Material That Never Finished the Job</h2>
+        <p>Most planetesimals eventually merged into the planets we know today. But in one region — between Mars and Jupiter — something interrupted the process.</p>
+        <p><strong>Jupiter's immense gravity</strong> stirred up that neighborhood so much that the planetesimals there kept colliding and breaking apart instead of combining into a planet. The result: a vast field of leftover rubble, still orbiting the Sun today.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section container">
+  <div class="grid-2 fade-up">
+    <div>
+      <span class="eyebrow">The Neighborhood</span>
+      <h2>The Asteroid Belt</h2>
+      <p>Most asteroids live in the <strong>main asteroid belt</strong>, a donut-shaped region between the orbits of Mars and Jupiter, roughly 2.2 to 3.2 astronomical units (AU) from the Sun.</p>
+      <p>Despite what movies show, the belt is mostly empty space — spacecraft have flown through it many times without incident. If you gathered every asteroid in the belt into one ball, it would be smaller than Earth's Moon.</p>
+      <p>The largest object in the belt, <strong>Ceres</strong>, is so big and round that it's classified as a dwarf planet.</p>
+    </div>
+    <div class="panel">
+      <svg class="diagram" viewBox="0 0 420 420" role="img" aria-label="Top-down diagram of the solar system showing the main asteroid belt between Mars and Jupiter">
+        <defs>
+          <radialGradient id="sunGrad">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="70%" stop-color="#d0d0d5"/>
+            <stop offset="100%" stop-color="#55555c"/>
+          </radialGradient>
+        </defs>
+        <!-- belt band -->
+        <circle cx="210" cy="210" r="132" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="46"/>
+        <!-- planet orbits -->
+        <g fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1">
+          <circle cx="210" cy="210" r="38"/>
+          <circle cx="210" cy="210" r="56"/>
+          <circle cx="210" cy="210" r="76"/>
+          <circle cx="210" cy="210" r="98"/>
+          <circle cx="210" cy="210" r="182"/>
+        </g>
+        <!-- asteroid field -->
+        <g fill="rgba(255,255,255,0.85)">
+          <circle cx="342" cy="196" r="1.7"/><circle cx="318" cy="140" r="1.3"/>
+          <circle cx="288" cy="112" r="1.9"/><circle cx="238" cy="82" r="1.4"/>
+          <circle cx="180" cy="80" r="1.7"/><circle cx="132" cy="106" r="1.3"/>
+          <circle cx="96" cy="146" r="1.8"/><circle cx="80" cy="200" r="1.4"/>
+          <circle cx="88" cy="256" r="1.6"/><circle cx="118" cy="304" r="1.2"/>
+          <circle cx="168" cy="334" r="1.8"/><circle cx="224" cy="338" r="1.4"/>
+          <circle cx="276" cy="316" r="1.7"/><circle cx="316" cy="278" r="1.3"/>
+          <circle cx="336" cy="238" r="1.5"/><circle cx="302" cy="168" r="1.2"/>
+          <circle cx="256" cy="98" r="1.2"/><circle cx="146" cy="322" r="1.4"/>
+          <circle cx="102" cy="286" r="1.2"/><circle cx="128" cy="128" r="1.5"/>
+          <circle cx="204" cy="342" r="1.2"/><circle cx="330" cy="258" r="1.2"/>
+        </g>
+        <!-- planets -->
+        <circle cx="248" cy="210" r="2.6" fill="#c7c7cf"/>
+        <circle cx="210" cy="154" r="3.4" fill="#c7c7cf"/>
+        <circle cx="286" cy="210" r="3.6" fill="#ffffff"/>
+        <circle cx="210" cy="308" r="3" fill="#c7c7cf"/>
+        <circle cx="392" cy="210" r="7" fill="#e7e7ea"/>
+        <!-- sun -->
+        <circle cx="210" cy="210" r="13" fill="url(#sunGrad)"/>
+        <!-- labels -->
+        <g fill="#9d9da6" font-family="Inter, sans-serif" font-size="10.5">
+          <text x="210" y="234" text-anchor="middle" fill="#e7e7ea">Sun</text>
+          <text x="292" y="202" >Earth</text>
+          <text x="210" y="324" text-anchor="middle">Mars</text>
+          <text x="392" y="232" text-anchor="middle">Jupiter</text>
+          <text x="210" y="46" text-anchor="middle" fill="#ffffff" font-size="11.5">Main Asteroid Belt</text>
+          <text x="210" y="62" text-anchor="middle">2.2 – 3.2 AU</text>
+        </g>
+      </svg>
+      <p class="diagram-caption">The belt sits between Mars and Jupiter — mostly empty space, not a crowded field.</p>
+    </div>
+  </div>
+
+  <div class="stat-row" style="margin-top:48px;">
+    <div class="stat"><span class="num">2.2–3.2 AU</span><span class="label">Distance from Sun</span></div>
+    <div class="stat"><span class="num">~4%</span><span class="label">of the Moon's mass, combined</span></div>
+    <div class="stat"><span class="num">940 km</span><span class="label">Ceres diameter</span></div>
+    <div class="stat"><span class="num">4.6 yrs</span><span class="label">Ceres orbital period</span></div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="text-center fade-up" style="margin-bottom:40px;">
+      <span class="eyebrow">Composition</span>
+      <h2>What Asteroids Are Made Of</h2>
+      <p style="max-width:640px;margin:0 auto;">Asteroids fall into three broad compositional families, based on how sunlight reflects off their surfaces.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card fade-up">
+        <div class="card-icon" data-icon="rock"></div>
+        <h3>C-type (Carbonaceous)</h3>
+        <p>The most common type — about <strong>75%</strong> of known asteroids. Dark, carbon-rich, and largely unchanged since the solar system formed. Bennu is a C-type asteroid.</p>
+      </div>
+      <div class="card fade-up">
+        <div class="card-icon" data-icon="mountain"></div>
+        <h3>S-type (Silicaceous)</h3>
+        <p>About <strong>17%</strong> of asteroids. Made of silicate rock and nickel-iron metal. Brighter than C-types and common in the inner asteroid belt.</p>
+      </div>
+      <div class="card fade-up">
+        <div class="card-icon" data-icon="gear"></div>
+        <h3>M-type (Metallic)</h3>
+        <p>A smaller group made mostly of <strong>nickel-iron metal</strong>, likely fragments of the cores of larger bodies that broke apart in ancient collisions.</p>
+      </div>
+    </div>
+
+    <div class="panel fade-up" style="margin-top:32px;">
+      <svg class="diagram" viewBox="0 0 720 132" role="img" aria-label="Bar chart showing asteroid composition: C-type 75 percent, S-type 17 percent, M-type and others 8 percent">
+        <g font-family="Inter, sans-serif">
+          <rect x="0" y="34" width="529" height="34" fill="#ffffff"/>
+          <rect x="533" y="34" width="120" height="34" fill="#9d9da6"/>
+          <rect x="657" y="34" width="63" height="34" fill="#4a4a50"/>
+
+          <text x="0" y="24" fill="#ffffff" font-size="13" font-weight="600">C-type · 75%</text>
+          <text x="533" y="24" fill="#c7c7cf" font-size="13" font-weight="600">S-type · 17%</text>
+          <text x="720" y="24" text-anchor="end" fill="#9d9da6" font-size="13" font-weight="600">M &amp; others · 8%</text>
+
+          <text x="0" y="90" fill="#6a6a73" font-size="11.5">Carbon-rich, very dark</text>
+          <text x="533" y="90" fill="#6a6a73" font-size="11.5">Silicate rock</text>
+          <text x="720" y="90" text-anchor="end" fill="#6a6a73" font-size="11.5">Nickel-iron</text>
+
+          <text x="0" y="118" fill="#9d9da6" font-size="12">Relative share of known asteroids by spectral type</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section container">
+  <div class="text-center fade-up" style="margin-bottom:40px;">
+    <span class="eyebrow">Famous Asteroids</span>
+    <h2>Meet the Neighbors</h2>
+  </div>
+  <div class="grid-2 fade-up">
+    <div class="card">
+      <div class="card-icon" data-icon="satellite"></div>
+      <h3>Bennu</h3>
+      <p>A small, carbon-rich, near-Earth asteroid about <strong>490 meters</strong> across — roughly the height of the Empire State Building. NASA's <strong>OSIRIS-REx</strong> mission visited Bennu, collected a sample of its surface, and returned it to Earth in 2023. Bennu is also tracked as a potentially hazardous asteroid, with a very small chance of a distant future close approach.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon" data-icon="moon"></div>
+      <h3>Vesta</h3>
+      <p>The second most massive object in the asteroid belt, about <strong>525 km</strong> across. Unlike most asteroids, Vesta is <strong>differentiated</strong> — it has a metallic core, rocky mantle, and crust, much like a small planet. NASA's <strong>Dawn</strong> spacecraft orbited Vesta in 2011–2012, revealing giant impact craters and towering cliffs.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="text-center fade-up" style="margin-bottom:20px;">
+      <span class="eyebrow">Interactive Tool</span>
+      <h2>Asteroid Size Comparison</h2>
+      <p style="max-width:640px;margin:0 auto;">Drag the slider to resize an asteroid and see how it stacks up against familiar objects — from a person to the entire Earth.</p>
+    </div>
+
+    <div class="tool-panel fade-up">
+      <div class="tool-presets" id="presetButtons"></div>
+
+      <div class="size-readout" id="sizeReadout">490 m</div>
+      <p style="color:var(--text-dim);margin-bottom:0;">Asteroid diameter</p>
+
+      <input type="range" min="0" max="1000" value="560" step="1" class="range-slider" id="sizeSlider" aria-label="Asteroid diameter">
+
+      <div class="scale-track-wrap">
+        <div class="scale-track" id="scaleTrack">
+          <!-- ticks + marker injected by JS -->
+        </div>
+      </div>
+
+      <div class="tool-description" id="toolDescription">
+        Loading comparison…
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    Built for education &amp; exploration · Data inspired by NASA / JPL public science · Not an official NASA product
+  </div>
+</footer>
+
+<script src="js/icons.js"></script>
+<script src="js/stars.js"></script>
+<script src="js/main.js"></script>
+<script src="js/asteroid-tool.js"></script>
+</body>
+</html>

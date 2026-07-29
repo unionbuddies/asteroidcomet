@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comets | Asteroids &amp; Comets</title>
+<meta name="description" content="What comets are made of, why they grow tails, how they orbit the Sun, and famous comets like Halley's Comet — with an interactive comet simulator.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+<div class="nebula-glow"></div>
+
+<nav class="site-nav">
+  <a href="index.html" class="nav-logo"><span class="dot"></span> ASTEROIDS &amp; COMETS</a>
+  <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="asteroids.html">Asteroids</a></li>
+    <li><a href="comets.html">Comets</a></li>
+    <li><a href="near-earth.html">Near-Earth</a></li>
+    <li><a href="explore.html">Explore</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero container">
+  <span class="eyebrow">Module 02</span>
+  <h1>Comets: <span class="glow-text">Icy Wanderers</span></h1>
+  <p class="lead" style="max-width:700px;margin:0 auto;">Frozen relics from the outer solar system that blaze into glowing spectacles whenever they swing near the Sun.</p>
+</header>
+
+<section class="section container">
+  <div class="grid-2 fade-up">
+    <div>
+      <span class="eyebrow">What They're Made Of</span>
+      <h2>Dirty Snowballs From the Deep Freeze</h2>
+      <p>A comet's solid core — its <strong>nucleus</strong> — is often described as a "dirty snowball," though scientists now prefer "icy dirtball," since it's mostly rock and dust held together by ices.</p>
+      <p>That nucleus is a mix of <strong>water ice, frozen carbon dioxide (dry ice), ammonia, methane, and dust</strong> — material that has stayed frozen since the solar system formed, because it condensed far from the Sun's heat.</p>
+      <p>Most comet nuclei are surprisingly small, typically just <strong>1 to 20 km</strong> across — yet they can grow comas and tails hundreds of thousands of kilometers long.</p>
+    </div>
+    <div class="panel fade-up">
+      <svg class="diagram" viewBox="0 0 420 300" role="img" aria-label="Diagram of a comet nucleus showing ice, embedded rock and dust, and sublimating gas jets">
+        <defs>
+          <radialGradient id="nucGrad" cx="36%" cy="32%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="55%" stop-color="#b4b4bb"/>
+            <stop offset="100%" stop-color="#3a3a40"/>
+          </radialGradient>
+        </defs>
+        <circle cx="150" cy="160" r="86" fill="url(#nucGrad)"/>
+        <g fill="#2a2a2e" opacity="0.75">
+          <circle cx="126" cy="128" r="7"/><circle cx="176" cy="150" r="5"/>
+          <circle cx="138" cy="186" r="6"/><circle cx="100" cy="160" r="4.5"/>
+          <circle cx="170" cy="200" r="4"/><circle cx="156" cy="108" r="3.5"/>
+        </g>
+        <g stroke="#ffffff" stroke-width="1.2" opacity="0.5" stroke-linecap="round">
+          <path d="M100 102 74 70"/><path d="M128 88 118 52"/><path d="M76 140 40 132"/>
+        </g>
+        <g stroke="rgba(255,255,255,0.35)" stroke-width="1" fill="none">
+          <path d="M212 132 h60"/>
+          <path d="M196 206 h76"/>
+          <path d="M124 56 l30 -18 h118"/>
+        </g>
+        <g font-family="Inter, sans-serif" fill="#e7e7ea" font-size="12.5" font-weight="600">
+          <text x="278" y="128">Water &amp; CO₂ ice</text>
+          <text x="278" y="202">Rock &amp; dust grains</text>
+          <text x="278" y="34">Sublimating jets</text>
+        </g>
+        <g font-family="Inter, sans-serif" fill="#6a6a73" font-size="11">
+          <text x="278" y="145">the bulk of the nucleus</text>
+          <text x="278" y="219">the &ldquo;dirty&rdquo; part</text>
+          <text x="278" y="51">gas escaping to space</text>
+        </g>
+      </svg>
+      <p class="diagram-caption">A comet nucleus: ice and rock, frozen since the solar system's birth.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="grid-2 fade-up">
+      <div class="panel">
+        <h3>Coma</h3>
+        <p>As a comet nears the Sun, heat causes its ices to <strong>sublimate</strong> — turning directly from solid to gas. This releases gas and dust that form a glowing cloud around the nucleus called the <strong>coma</strong>, which can grow larger than a planet.</p>
+        <h3 style="margin-top:24px;">Two Tails, Always Pointing Away From the Sun</h3>
+        <p>Solar wind and radiation pressure blow that gas and dust away from the nucleus, forming two distinct tails: a <strong>dust tail</strong> (yellowish, curved, reflecting sunlight) and an <strong>ion tail</strong> (blue, straight, made of charged gas pushed by solar wind). Both tails always point <strong>away from the Sun</strong> — not behind the direction of travel — which is why a comet's tail can actually lead the way as it leaves the Sun's neighborhood.</p>
+      </div>
+      <div>
+        <span class="eyebrow">Why They Have Tails</span>
+        <h2>Built by Sunlight and Solar Wind</h2>
+        <p>Far from the Sun, a comet is just a dark, frozen nucleus — no coma, no tail, nearly invisible. It's only the Sun's heat and particles that transform it into the dramatic object we recognize.</p>
+        <p>The closer a comet gets to the Sun, the more intense the sublimation, and the bigger and brighter its coma and tails become. Try it yourself below.</p>
+      </div>
+    </div>
+
+    <div class="panel fade-up" style="margin-top:36px;">
+      <svg class="diagram" viewBox="0 0 900 330" role="img" aria-label="Labeled anatomy diagram of a comet showing the sun, nucleus, coma, straight ion tail and curved dust tail, both pointing away from the sun">
+        <defs>
+          <radialGradient id="sunA"><stop offset="0%" stop-color="#ffffff"/><stop offset="70%" stop-color="#cfcfd4"/><stop offset="100%" stop-color="#4a4a50"/></radialGradient>
+          <radialGradient id="comaA"><stop offset="0%" stop-color="rgba(255,255,255,0.95)"/><stop offset="55%" stop-color="rgba(255,255,255,0.28)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></radialGradient>
+          <linearGradient id="ionA" x1="0" x2="1"><stop offset="0%" stop-color="rgba(255,255,255,0.95)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></linearGradient>
+          <linearGradient id="dustA" x1="0" x2="1"><stop offset="0%" stop-color="rgba(210,210,215,0.6)"/><stop offset="100%" stop-color="rgba(210,210,215,0)"/></linearGradient>
+        </defs>
+
+        <!-- sun -->
+        <circle cx="70" cy="160" r="46" fill="url(#sunA)"/>
+        <text x="70" y="232" text-anchor="middle" font-family="Inter, sans-serif" font-size="12.5" font-weight="600" fill="#ffffff">Sun</text>
+
+        <!-- radiation direction arrows -->
+        <g stroke="rgba(255,255,255,0.28)" stroke-width="1" stroke-dasharray="4 5">
+          <path d="M126 132 h150"/><path d="M126 160 h150"/><path d="M126 188 h150"/>
+        </g>
+        <text x="200" y="122" font-family="Inter, sans-serif" font-size="10.5" fill="#6a6a73">solar wind &amp; radiation →</text>
+
+        <!-- dust tail (curved, broad) -->
+        <path d="M470 160 C 610 150, 730 176, 862 214 L 862 246 C 726 214, 600 190, 470 178 Z" fill="url(#dustA)"/>
+        <!-- ion tail (straight, narrow) -->
+        <path d="M470 156 L 880 148 L 880 160 L 470 166 Z" fill="url(#ionA)"/>
+
+        <!-- coma + nucleus -->
+        <circle cx="452" cy="160" r="54" fill="url(#comaA)"/>
+        <circle cx="452" cy="160" r="8" fill="#ffffff"/>
+
+        <!-- leader lines -->
+        <g stroke="rgba(255,255,255,0.4)" stroke-width="1" fill="none">
+          <path d="M452 148 L 452 78"/>
+          <path d="M424 206 L 386 262"/>
+          <path d="M742 150 L 742 96"/>
+          <path d="M742 196 L 742 258"/>
+        </g>
+
+        <g font-family="Inter, sans-serif" font-weight="600" font-size="12.5" fill="#ffffff">
+          <text x="452" y="68" text-anchor="middle">Nucleus</text>
+          <text x="380" y="278" text-anchor="middle">Coma</text>
+          <text x="742" y="86" text-anchor="middle">Ion tail</text>
+          <text x="742" y="276" text-anchor="middle">Dust tail</text>
+        </g>
+        <g font-family="Inter, sans-serif" font-size="10.5" fill="#6a6a73">
+          <text x="452" y="84" text-anchor="middle">solid ice &amp; rock core</text>
+          <text x="380" y="294" text-anchor="middle">glowing gas cloud</text>
+          <text x="742" y="70" text-anchor="middle">straight — pushed by solar wind</text>
+          <text x="742" y="292" text-anchor="middle">curved — heavier dust lags behind</text>
+        </g>
+      </svg>
+      <p class="diagram-caption">Both tails stream away from the Sun — the ion tail straight, the heavier dust tail curving behind the comet's path.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section container">
+  <div class="grid-2 fade-up">
+    <div>
+      <span class="eyebrow">Orbits</span>
+      <h2>Long, Stretched-Out Journeys</h2>
+      <p>Comets travel in highly <strong>elliptical (elongated) orbits</strong> that swing them from the freezing outer solar system to a close, fiery pass by the Sun, and back out again.</p>
+      <p><strong>Short-period comets</strong> (orbits under 200 years) usually come from the <strong>Kuiper Belt</strong>, a disk of icy bodies beyond Neptune. <strong>Long-period comets</strong>, with orbits lasting thousands of years, are thought to come from the <strong>Oort Cloud</strong> — a vast, distant shell of icy objects surrounding the entire solar system.</p>
+    </div>
+    <div class="stat-row" style="margin:0;">
+      <div class="stat"><span class="num">&lt;200 yrs</span><span class="label">Short-period orbit</span></div>
+      <div class="stat"><span class="num">1000s of yrs</span><span class="label">Long-period orbit</span></div>
+      <div class="stat"><span class="num">Kuiper Belt</span><span class="label">Source of short-period comets</span></div>
+      <div class="stat"><span class="num">Oort Cloud</span><span class="label">Source of long-period comets</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="text-center fade-up" style="margin-bottom:20px;">
+      <span class="eyebrow">Famous Comet</span>
+      <h2>Halley's Comet</h2>
+    </div>
+    <div class="card fade-up" style="max-width:760px;margin:0 auto;">
+      <p>The most famous comet in history, <strong>Halley's Comet</strong> returns to the inner solar system roughly every <strong>76 years</strong>. It's named after astronomer Edmond Halley, who in 1705 used Newton's laws to correctly predict its return in 1758 — proving comets follow the same physics as planets.</p>
+      <p>Halley last appeared in <strong>1986</strong>, when it was visited by several spacecraft, and it's due to return in <strong>2061</strong>. It's the only known short-period comet reliably visible to the naked eye from Earth, twice in a human lifetime.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section container">
+  <div class="text-center fade-up" style="margin-bottom:20px;">
+    <span class="eyebrow">Interactive Tool</span>
+    <h2>Comet Simulator</h2>
+    <p style="max-width:640px;margin:0 auto;">Drag the slider to move the comet closer to or farther from the Sun, and watch its coma and tails react.</p>
+  </div>
+
+  <div class="tool-panel fade-up">
+    <div class="text-center">
+      <span class="distance-readout" id="distanceReadout">1.0 AU</span>
+      <p style="color:var(--text-dim);margin-bottom:0;">Distance from the Sun</p>
+    </div>
+
+    <input type="range" min="0" max="1000" value="500" step="1" class="range-slider" id="distanceSlider" aria-label="Distance from the Sun">
+
+    <div class="comet-stage" id="cometStage">
+      <div class="sun" aria-hidden="true"></div>
+      <div class="comet-tail tail-dust" id="tailDust"></div>
+      <div class="comet-tail tail-ion" id="tailIon"></div>
+      <div class="comet-body" id="cometBody">
+        <div class="comet-coma" id="cometComa"></div>
+        <div class="comet-nucleus"></div>
+      </div>
+    </div>
+    <p class="comet-caption">Notice the tails always point away from the Sun, no matter where the comet sits in its orbit.</p>
+
+    <div class="tool-description" id="cometDescription">Loading…</div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    Built for education &amp; exploration · Data inspired by NASA / JPL public science · Not an official NASA product
+  </div>
+</footer>
+
+<script src="js/icons.js"></script>
+<script src="js/stars.js"></script>
+<script src="js/main.js"></script>
+<script src="js/comet-simulator.js"></script>
+</body>
+</html>
