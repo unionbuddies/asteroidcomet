@@ -37,33 +37,90 @@
     <div>
       <span class="eyebrow">What They Are</span>
       <h2>Rubble From an Unfinished Planet</h2>
-      <p>Asteroids are rocky, metallic bodies left over from the formation of the solar system roughly <strong>4.6 billion years ago</strong>. They're too small and too irregular to be considered planets — most are just a few meters to a few hundred kilometers across.</p>
-      <p>Unlike comets, asteroids formed closer to the Sun, in a region too warm for ice to survive, so they're made mostly of <strong>rock and metal</strong> rather than ice.</p>
+      <p>Asteroids are rocky, metallic leftovers from the birth of the solar system <strong>4.6 billion years ago</strong> — too small and lumpy to be planets. The one at right, <strong>Bennu</strong>, is a 490-metre rubble pile that NASA's OSIRIS-REx sampled and flew back to Earth in 2023.</p>
       <div class="stat-row">
-        <div class="stat"><span class="num">1.3M+</span><span class="label">Known Asteroids</span></div>
-        <div class="stat"><span class="num">~1000 km</span><span class="label">Largest (Ceres)</span></div>
+        <div class="stat"><span class="num">1.3M+</span><span class="label">Known asteroids</span></div>
+        <div class="stat"><span class="num">Rock &amp; metal</span><span class="label">Not ice, like comets</span></div>
       </div>
     </div>
-    <div class="panel fade-up">
-      <div class="rock" style="width:220px;height:180px;margin:0 auto;"></div>
-      <p class="text-center" style="margin-top:18px;color:var(--text-dim);font-size:0.85rem;">Illustrative asteroid shape — irregular, cratered, and un-rounded by gravity.</p>
-    </div>
+    <figure class="photo-fig fade-up">
+      <img src="assets/img/bennu.jpg" alt="Asteroid Bennu, a diamond-shaped rubble pile photographed by NASA's OSIRIS-REx spacecraft" loading="lazy" width="1000" height="1000">
+      <figcaption class="photo-credit">Asteroid Bennu · NASA / Goddard / University of Arizona</figcaption>
+    </figure>
   </div>
 </section>
 
 <section class="section section-alt">
   <div class="container">
-    <div class="grid-2 fade-up">
-      <div class="panel">
-        <h3>The Solar Nebula</h3>
-        <p>About 4.6 billion years ago, a giant cloud of gas and dust — the <strong>solar nebula</strong> — collapsed under its own gravity. Most of the material fell into the center to form the Sun, while the rest flattened into a spinning disk.</p>
-        <p>Within that disk, dust grains stuck together, forming pebbles, then boulders, then <strong>planetesimals</strong> — the building blocks of planets.</p>
+    <div class="text-center fade-up" style="margin-bottom:38px;">
+      <span class="eyebrow">Where They Come From</span>
+      <h2>Bricks That Never Became a Planet</h2>
+      <p style="max-width:620px;margin:0 auto;">Asteroids are building material left over from planet formation. Here's how the belt got left behind.</p>
+    </div>
+    <div class="formation-strip fade-up">
+      <div class="formation-step">
+        <span class="fs-num">01</span>
+        <svg viewBox="0 0 160 116" aria-hidden="true">
+          <defs><radialGradient id="fsNeb" cx="50%" cy="50%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.55)"/><stop offset="65%" stop-color="rgba(255,255,255,0.1)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+          </radialGradient></defs>
+          <ellipse cx="80" cy="58" rx="66" ry="46" fill="url(#fsNeb)"/>
+          <g fill="#ffffff">
+            <circle cx="52" cy="40" r="1.4"/><circle cx="104" cy="46" r="1.6"/><circle cx="86" cy="70" r="1.2"/>
+            <circle cx="64" cy="72" r="1.4"/><circle cx="96" cy="34" r="1.1"/><circle cx="74" cy="52" r="1.3"/>
+          </g>
+        </svg>
+        <h4>Solar Nebula</h4>
+        <p>A vast cloud of gas and dust collapses under its own gravity.</p>
       </div>
-      <div>
-        <span class="eyebrow">Where They Come From</span>
-        <h2>Planet-Building Material That Never Finished the Job</h2>
-        <p>Most planetesimals eventually merged into the planets we know today. But in one region — between Mars and Jupiter — something interrupted the process.</p>
-        <p><strong>Jupiter's immense gravity</strong> stirred up that neighborhood so much that the planetesimals there kept colliding and breaking apart instead of combining into a planet. The result: a vast field of leftover rubble, still orbiting the Sun today.</p>
+      <div class="formation-step">
+        <span class="fs-num">02</span>
+        <svg viewBox="0 0 160 116" aria-hidden="true">
+          <defs><radialGradient id="fsSun" cx="50%" cy="50%">
+            <stop offset="0%" stop-color="#ffffff"/><stop offset="60%" stop-color="#d0d0d5"/><stop offset="100%" stop-color="#55555c"/>
+          </radialGradient></defs>
+          <ellipse cx="80" cy="58" rx="70" ry="16" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.4"/>
+          <ellipse cx="80" cy="58" rx="46" ry="10" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+          <path d="M18 58a62 15 0 0 1 26 -13" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" marker-end="url(#fsArrow)"/>
+          <circle cx="80" cy="58" r="11" fill="url(#fsSun)"/>
+          <defs><marker id="fsArrow" markerWidth="7" markerHeight="7" refX="4" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="rgba(255,255,255,0.6)"/></marker></defs>
+        </svg>
+        <h4>Spinning Disk</h4>
+        <p>Most matter forms the Sun; the rest flattens into a rotating disk.</p>
+      </div>
+      <div class="formation-step">
+        <span class="fs-num">03</span>
+        <svg viewBox="0 0 160 116" aria-hidden="true">
+          <g fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.2">
+            <path d="M44 58 L60 58" marker-end="url(#fsA2)"/>
+            <path d="M116 58 L100 58" marker-end="url(#fsA2)"/>
+          </g>
+          <defs><marker id="fsA2" markerWidth="7" markerHeight="7" refX="4" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="rgba(255,255,255,0.7)"/></marker></defs>
+          <g fill="#8f8f96" stroke="#26262b" stroke-width="0.6">
+            <circle cx="74" cy="52" r="13"/><circle cx="88" cy="64" r="10"/>
+            <circle cx="70" cy="70" r="6"/><circle cx="92" cy="48" r="5"/>
+          </g>
+          <g fill="#c7c7cf"><circle cx="30" cy="44" r="2.4"/><circle cx="130" cy="70" r="2.8"/><circle cx="34" cy="76" r="2"/><circle cx="126" cy="40" r="2.2"/></g>
+        </svg>
+        <h4>Planetesimals</h4>
+        <p>Dust sticks into pebbles, boulders, then planet-sized clumps.</p>
+      </div>
+      <div class="formation-step">
+        <span class="fs-num">04</span>
+        <svg viewBox="0 0 160 116" aria-hidden="true">
+          <defs><radialGradient id="fsJup" cx="40%" cy="38%">
+            <stop offset="0%" stop-color="#e7e7ea"/><stop offset="100%" stop-color="#55555c"/>
+          </radialGradient></defs>
+          <circle cx="60" cy="58" r="6" fill="url(#fsSun)"/>
+          <ellipse cx="60" cy="58" rx="52" ry="40" fill="none" stroke="rgba(255,255,255,0.16)" stroke-width="18"/>
+          <g fill="#ffffff">
+            <circle cx="60" cy="18" r="1.4"/><circle cx="92" cy="30" r="1.5"/><circle cx="100" cy="70" r="1.3"/>
+            <circle cx="74" cy="96" r="1.4"/><circle cx="30" cy="80" r="1.2"/><circle cx="22" cy="46" r="1.3"/><circle cx="44" cy="24" r="1.2"/>
+          </g>
+          <circle cx="138" cy="58" r="12" fill="url(#fsJup)"/>
+        </svg>
+        <h4>Jupiter Interferes</h4>
+        <p>Between Mars and Jupiter, Jupiter's gravity blocks a planet from forming — leaving the belt.</p>
       </div>
     </div>
   </div>
@@ -74,9 +131,8 @@
     <div>
       <span class="eyebrow">The Neighborhood</span>
       <h2>The Asteroid Belt</h2>
-      <p>Most asteroids live in the <strong>main asteroid belt</strong>, a donut-shaped region between the orbits of Mars and Jupiter, roughly 2.2 to 3.2 astronomical units (AU) from the Sun.</p>
-      <p>Despite what movies show, the belt is mostly empty space — spacecraft have flown through it many times without incident. If you gathered every asteroid in the belt into one ball, it would be smaller than Earth's Moon.</p>
-      <p>The largest object in the belt, <strong>Ceres</strong>, is so big and round that it's classified as a dwarf planet.</p>
+      <p>Most asteroids orbit in the <strong>main belt</strong> between Mars and Jupiter. Despite the movies, it's mostly empty space — every asteroid combined wouldn't even equal our Moon.</p>
+      <p>Its largest resident, <strong>Ceres</strong>, is round enough to count as a dwarf planet.</p>
     </div>
     <div class="panel">
       <svg class="diagram" viewBox="0 0 420 420" role="img" aria-label="Top-down diagram of the solar system showing the main asteroid belt between Mars and Jupiter">
@@ -192,17 +248,38 @@
   <div class="text-center fade-up" style="margin-bottom:40px;">
     <span class="eyebrow">Famous Asteroids</span>
     <h2>Meet the Neighbors</h2>
+    <p style="max-width:600px;margin:0 auto;">Two of the best-studied asteroids — one a battered mini-world, one with a moon of its own.</p>
   </div>
-  <div class="grid-2 fade-up">
-    <div class="card">
-      <div class="card-icon" data-icon="satellite"></div>
-      <h3>Bennu</h3>
-      <p>A small, carbon-rich, near-Earth asteroid about <strong>490 meters</strong> across — roughly the height of the Empire State Building. NASA's <strong>OSIRIS-REx</strong> mission visited Bennu, collected a sample of its surface, and returned it to Earth in 2023. Bennu is also tracked as a potentially hazardous asteroid, with a very small chance of a distant future close approach.</p>
+  <div class="grid-2 fade-up photo-card-grid">
+    <div class="photo-card">
+      <div class="pc-img">
+        <img src="assets/img/vesta.jpg" alt="Asteroid Vesta, a heavily cratered mini-world imaged by NASA's Dawn spacecraft" loading="lazy" width="1024" height="1024">
+        <span class="pc-credit">NASA / JPL-Caltech / UCLA / MPS / DLR / IDA</span>
+      </div>
+      <div class="pc-body">
+        <h3>Vesta</h3>
+        <p>The belt's second-most-massive body — and <strong>differentiated</strong>, with a metallic core, mantle, and crust like a tiny planet.</p>
+        <div class="fact-chips">
+          <div class="chip"><span class="k">Diameter</span><span class="v">525 km</span></div>
+          <div class="chip"><span class="k">Visited by</span><span class="v">Dawn, 2011</span></div>
+          <div class="chip"><span class="k">Type</span><span class="v">Differentiated</span></div>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <div class="card-icon" data-icon="moon"></div>
-      <h3>Vesta</h3>
-      <p>The second most massive object in the asteroid belt, about <strong>525 km</strong> across. Unlike most asteroids, Vesta is <strong>differentiated</strong> — it has a metallic core, rocky mantle, and crust, much like a small planet. NASA's <strong>Dawn</strong> spacecraft orbited Vesta in 2011–2012, revealing giant impact craters and towering cliffs.</p>
+    <div class="photo-card">
+      <div class="pc-img">
+        <img src="assets/img/ida.jpg" alt="Asteroid Ida and its tiny moon Dactyl, imaged by NASA's Galileo spacecraft" loading="lazy" width="1200" height="889">
+        <span class="pc-credit">NASA / JPL</span>
+      </div>
+      <div class="pc-body">
+        <h3>Ida &amp; Dactyl</h3>
+        <p>A 56-km main-belt asteroid famous for the speck to its right — <strong>Dactyl</strong>, the first moon ever found orbiting an asteroid.</p>
+        <div class="fact-chips">
+          <div class="chip"><span class="k">Length</span><span class="v">56 km</span></div>
+          <div class="chip"><span class="k">Visited by</span><span class="v">Galileo, 1993</span></div>
+          <div class="chip"><span class="k">Has</span><span class="v">A moon</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
