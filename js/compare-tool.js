@@ -25,7 +25,7 @@
     { id: 'giraffe', name: 'Giraffe', size: 5.5, sil: 'giraffe', cat: 'Nature', aName: 'a giraffe', plural: 'giraffes' },
     { id: 'tree', name: 'Oak tree', size: 25, sil: 'tree', cat: 'Nature', aName: 'an oak tree', plural: 'oak trees' },
     { id: 'whale', name: 'Blue whale', size: 30, sil: 'whale', cat: 'Nature', aName: 'a blue whale', plural: 'blue whales' },
-    { id: 'house', name: 'Two-storey house', size: 9, sil: 'house', cat: 'Buildings', aName: 'a two-storey house', plural: 'houses' },
+    { id: 'house', name: 'Two-story house', size: 9, sil: 'house', cat: 'Buildings', aName: 'a two-story house', plural: 'houses' },
     { id: 'liberty', name: 'Statue of Liberty', size: 93, sil: 'liberty', cat: 'Buildings', aName: 'the Statue of Liberty', plural: 'Statues of Liberty' },
     { id: 'eiffel', name: 'Eiffel Tower', size: 330, sil: 'eiffel', cat: 'Buildings', aName: 'the Eiffel Tower', plural: 'Eiffel Towers' },
     { id: 'burj', name: 'Burj Khalifa', size: 828, sil: 'burj', cat: 'Buildings', aName: 'the Burj Khalifa', plural: 'Burj Khalifas' },
@@ -123,6 +123,13 @@
     return `<select class="compare-select" id="${id}">${opts}</select>`;
   }
 
+  function buildFlatSelect(id, items, selectedId) {
+    const opts = items.map((it) =>
+      `<option value="${it.id}"${it.id === selectedId ? ' selected' : ''}>${it.name} · ${fmtSize(it.size)}</option>`
+    ).join('');
+    return `<select class="compare-select" id="${id}">${opts}</select>`;
+  }
+
   function describe(space, ref) {
     const ratio = space.size / ref.size;
     let headline, note = '';
@@ -175,12 +182,15 @@
   }
 
   // --- Build UI ---
-  const defaultSpace = mount.dataset.defaultSpace || 'bennu';
+  const spaceType = mount.dataset.spaceType; // 'asteroid' | 'comet' | undefined (show all)
+  const spaceItems = spaceType ? SPACE.filter((s) => s.type === spaceType) : SPACE;
+  const defaultSpace = mount.dataset.defaultSpace || spaceItems[0].id;
+  const spaceLabel = spaceType === 'comet' ? 'Comet' : spaceType === 'asteroid' ? 'Asteroid' : 'Space object';
   mount.innerHTML = `
     <div class="compare-controls">
       <div class="compare-field">
-        <label for="cmpSpace">Space object</label>
-        ${buildSelect('cmpSpace', SPACE, 'type', defaultSpace)}
+        <label for="cmpSpace">${spaceLabel}</label>
+        ${buildFlatSelect('cmpSpace', spaceItems, defaultSpace)}
       </div>
       <div class="compare-field">
         <label for="cmpRef">Compare it to</label>
